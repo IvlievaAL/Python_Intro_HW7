@@ -26,7 +26,7 @@
 #         points = points_latin
 #     return points
 
-russian_vowels_characters = ("АЕИОУЭЮЯ")
+russian_vowels_characters = ("АЕЁИОУЫЭЮЯ")
 our_phrases = input("Вводи кричалку, Винни: ").upper().split()
 how_many_vowels = []
 for phrase in our_phrases:
