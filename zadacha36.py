@@ -16,3 +16,16 @@
 # 4 8 12 16 20 24
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
+
+def operation(x, y):
+    res = x * y
+    return res
+
+num_rows = 6
+num_columns = 6
+for i in range (1, num_rows + 1):
+    our_row = []
+    for j in range(1, num_columns + 1):
+        our_row.append(operation(i, j))
+    print(*our_row)
+
