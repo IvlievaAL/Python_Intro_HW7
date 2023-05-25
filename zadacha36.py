@@ -17,28 +17,13 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-def print_operation_table():
+def print_operation_table(operation):
     num_rows = 6
     num_columns = 6
-    res_row = [[f"{x * y}" for y in range(1, num_rows + 1)] for x in range(1, num_columns + 1)]
-    table_for_print = ""
-    for row in res_row:
-        for item in row:
-            table_for_print += f"{item} "
-        table_for_print += f"\n"
-    print(table_for_print)
+    for row in range(1, num_rows + 1):
+        y_row = [row for i in range(1, num_rows + 1)]
+        res_row = list(map(operation, [item for item in range(1, num_columns + 1)], y_row))
+        print(*res_row)
 
 
-print_operation_table()
-
-# def print_operation_table(operation):
-
-# for i in range (1, num_rows + 1):
-#     our_row = []
-#     for j in range(1, num_columns + 1):
-#         our_row.append(operation(i, j))
-#     print(*our_row)
-
-# print_operation_table(lambda x, y: x * y)
-
-#  res_row = [[lambda x, y: x * y for y in range(1, num_rows + 1)] for x in range(1, num_columns + 1)]
+print_operation_table(lambda x, y: x * y)
